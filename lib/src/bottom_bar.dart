@@ -138,7 +138,7 @@ class BottomBarState extends State<BottomBar> {
           width: MediaQuery.of(context).size.width,
           duration: new Duration(seconds: 1),
           child: Container(
-            color: widget.darkMode ? Color(0xff171717) : Color(0xffdbdbdb),
+            color: widget.darkMode ? Color(0xff171717) : Color(0xffD1D5DB),
             alignment: Alignment.bottomCenter,
             child: SizedBox(
               child: Row(

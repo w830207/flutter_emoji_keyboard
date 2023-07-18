@@ -332,18 +332,8 @@ class EmojiBoard extends State<EmojiKeyboard> {
     addRecentEmoji(myText, category);
     emojiScrollShowBottomBar(true);
     final text = bromotionController!.text;
-    final textSelection = bromotionController!.selection;
-    final newText = text.replaceRange(
-      textSelection.start,
-      textSelection.end,
-      myText,
-    );
-    final myTextLength = myText.length;
+    final newText = text + myText;
     bromotionController!.text = newText;
-    bromotionController!.selection = textSelection.copyWith(
-      baseOffset: textSelection.start + myTextLength,
-      extentOffset: textSelection.start + myTextLength,
-    );
   }
 
   bool isPortrait() {
@@ -373,7 +363,7 @@ class EmojiBoard extends State<EmojiKeyboard> {
                   ? emojiKeyboardHeight
                   : 150
               : 0,
-          color: this.darkMode ? Color(0xff373737) : Color(0xffc5c5c5),
+          color: this.darkMode ? Color(0xff373737) : Color(0xffD1D5DB),
           child: Column(children: [
             CategoryBar(
                 key: categoryBarStateKey,
@@ -398,7 +388,7 @@ class EmojiBoard extends State<EmojiKeyboard> {
         ),
         widget.showEmojiKeyboard && searchMode
             ? Container(
-                color: this.darkMode ? Color(0xff373737) : Color(0xffc5c5c5),
+                color: this.darkMode ? Color(0xff373737) : Color(0xffD1D5DB),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [

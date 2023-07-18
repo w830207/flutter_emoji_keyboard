@@ -56,7 +56,7 @@ class CategoryBarState extends State<CategoryBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: widget.darkMode ? Color(0xff171717) : Color(0xffdbdbdb),
+      color: widget.darkMode ? Color(0xff171717) : Color(0xffD1D5DB),
       height: emojiCategoryHeight,
       width: MediaQuery.of(context).size.width,
       child: SizedBox(
